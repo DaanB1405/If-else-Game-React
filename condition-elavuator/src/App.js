@@ -45,11 +45,12 @@ const App = () => {
   const nextQuestionDelay = 2000
 
   useEffect(() => {
-    const storedHighscore = localStorage.getItem('highScore');
+    const storedHighscore = localStorage.getItem('highscore');
     if (storedHighscore) {
       sethighScore(parseInt(storedHighscore, 10));
     }
   }, []);
+
 
   const handleAnswer = (userAnswer) => {
     setDisable(true);
